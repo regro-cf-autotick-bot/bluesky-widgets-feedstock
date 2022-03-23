@@ -11,8 +11,10 @@ source:
   sha256: 75bf6a04b965de214332b3c6ae77332d96142a8a780d5622372b10f19e1885b3
 
 build:
-  number: 0
+  number: 1
   noarch: python
+  entry_points:
+    - queue-monitor = bluesky_widgets.apps.queue_monitor.main:main
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
