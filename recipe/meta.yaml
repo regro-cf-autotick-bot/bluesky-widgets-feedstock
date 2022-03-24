@@ -33,7 +33,7 @@ test:
     - bluesky_widgets.examples
   commands:
     - pip check
-    - queue-monitor --help
+    - which queue-monitor
   requires:
     - pip
 
