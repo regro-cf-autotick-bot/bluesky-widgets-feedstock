@@ -1,5 +1,5 @@
 {% set name = "bluesky-widgets" %}
-{% set version = "0.0.10" %}
+{% set version = "0.0.11" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bluesky-widgets-{{ version }}.tar.gz
-  sha256: 75bf6a04b965de214332b3c6ae77332d96142a8a780d5622372b10f19e1885b3
+  sha256: ccae46a14f6e58adbc7ae673204d35cf3b62c88aa42d33ba6bb54218f53b0ff0
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - queue-monitor = bluesky_widgets.apps.queue_monitor.main:main
@@ -33,6 +33,7 @@ test:
     - bluesky_widgets.examples
   commands:
     - pip check
+    - queue-monitor --help
   requires:
     - pip
 
