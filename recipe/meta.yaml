@@ -1,5 +1,5 @@
 {% set name = "bluesky-widgets" %}
-{% set version = "0.0.11" %}
+{% set version = "0.0.12" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bluesky-widgets-{{ version }}.tar.gz
-  sha256: ccae46a14f6e58adbc7ae673204d35cf3b62c88aa42d33ba6bb54218f53b0ff0
+  sha256: e7b15f67d63da6f9e2285fbfb4bd2e82c521457450c9b2529274068c85cf101f
 
 build:
   number: 0
