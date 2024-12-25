@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bluesky-widgets-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bluesky-widgets-{{ version }}.tar.gz
   sha256: 9c1b97f8328901865aecd8fd9e06f3d960b95de814a62f8c1b3ba3919941e096
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - queue-monitor = bluesky_widgets.apps.queue_monitor.main:main
@@ -20,11 +20,11 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - bluesky-live >=0.0.7
     - numpy
-    - python >=3.6
+    - python >={{ python_min }}
     - suitcase-utils <=0.5.3
 
 test:
@@ -36,6 +36,7 @@ test:
     - which queue-monitor
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/bluesky/bluesky-widgets
